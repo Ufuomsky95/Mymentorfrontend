@@ -1,20 +1,48 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
+import { useShopContext } from '../context'
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
+    const navigate = useNavigate()
+    interface LoginResponse {
+        token: string,
+        user: {
+            id: string,
+            name?:string,
+            email:string,
+            role:string
+        }
+    }
 
+    const context = useShopContext()
+    const backendUrl= context?.backendUrl || ""
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
-
+     
+    const [, setIsloading] = useState<boolean>(false)
+     
+    const [, setError] =useState<string>("")
 
     const submit = async(e:React.FormEvent<HTMLFormElement>) => {
+        setIsloading (true)
+        setError("")
         try {
             e.preventDefault()
-            console.log(email)
-            console.log(password)
-        } catch (error) {
-            
+           const response = await axios.post <LoginResponse> (`${backendUrl}/api/auth/login`, {
+            email,password
+           })
+           if (response.status===200) {
+            navigate("/")
+           }
+           //    if(response.data.token.role==="admin")
+        //     navigate("/admin")
+        } 
+        catch (error) {
+            console.log(error)
+        }finally{
+            setIsloading(false)
         }
         
     }
