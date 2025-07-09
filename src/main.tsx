@@ -4,6 +4,7 @@ import App from './App.tsx'
 import { BrowserRouter } from 'react-router-dom'
 import ShopContextProvider from './context.tsx'
 
+
 createRoot(document.getElementById('root')!).render(
   
     <BrowserRouter>
