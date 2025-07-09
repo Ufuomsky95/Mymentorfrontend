@@ -8,6 +8,7 @@ function Home() {
          <h2>Find a Mentor. Be a Mentor.</h2>
 <p>Real growth starts with real guidance — connect with experienced mentors who’ve walked your path and want to see you thrive. <br />
 Get Started * Find Your Match</p>  
+<a href="#login"> <button type='submit' className='right-3 mt-5 text-2xl bg-purple-400 hover:bg-purple-700 p-3 rounded-xl top-9 focus:outline-none w-lg '>Login</button></a>
     </div>
    
   )
