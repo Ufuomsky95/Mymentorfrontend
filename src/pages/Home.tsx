@@ -8,7 +8,7 @@ function Home() {
 
        <div >
         <a href="http://localhost:5173/login"> <button className='right-3 mt-5 text-2xl bg-purple-400 hover:bg-purple-700 p-3 rounded-xl top-9 focus:outline-none w-20 '>Login</button></a> 
-        <a href="http://localhost:5173/login"> <button className='right-3 mt-5 ml-15 text-2xl bg-purple-400 hover:bg-purple-700 p-3 rounded-xl top-9 focus:outline-none w-27 '>Register</button></a> 
+        <a href="http://localhost:5173/profile"> <button className='right-3 mt-5 ml-15 text-2xl bg-purple-400 hover:bg-purple-700 p-3 rounded-xl top-9 focus:outline-none w-27 '>Register</button></a> 
         
         </div>
 
@@ -26,7 +26,7 @@ function Home() {
 
   <a href="http://localhost:5173/login"> <button className='right-3 mt-5 text-2xl bg-purple-400 hover:bg-purple-700 p-3 rounded-xl top-9 focus:outline-none w-28 '>Get Started</button></a> 
 
-  <a href="http://localhost:5173/login"> <button className='right-3 mt-5 text-2xl bg-purple-400 hover:bg-purple-700 p-3 rounded-xl top-9 focus:outline-none w-35 '>Find Your Match</button></a> 
+  <a href="http://localhost:5173/home"> <button className='right-3 mt-5 text-2xl bg-purple-400 hover:bg-purple-700 p-3 rounded-xl top-9 focus:outline-none w-35 '>Find Your Match</button></a> 
 </p>  
 
    </div>
